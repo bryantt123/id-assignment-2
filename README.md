@@ -1,8 +1,10 @@
-# Your Project's Name
+# Genshin Quest
 
 One or two paragraphs providing an overview of your project. Tell us about your project.
 
 Essentially, this part is your sales pitch.
+
+Genshin Quest is made to allow users 
  
 ## Design Process
  
