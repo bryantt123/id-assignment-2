@@ -1,0 +1,40 @@
+/*intro page*/
+@font-face{
+    font-family: Futura;
+    src: url(futura\ medium\ bt.ttf)
+}
+
+html{
+    font-family: "Futura";
+}
+
+.title{
+    
+}
+
+.introduction{
+    font-size: medium;
+    color: white;
+}
+
+body{
+    position: relative;
+    padding: 100px;
+    background: gainsboro;
+}
+
+
+.loginbutton{
+    background-color: rgb(47, 123, 167);
+    color: white;
+    border-radius: 8px;
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.loginbutton:hover{
+    background-color: rgb(29, 76, 146);
+    transform:translateY(-5px);
+}
