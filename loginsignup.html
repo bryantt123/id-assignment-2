@@ -17,13 +17,13 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="#">
+                    <form id="login-form" action="#">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" id="email-address" class="input">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Password" class="password">
+                            <input type="password" placeholder="Password" id="password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
                         </div>
 <!--
@@ -32,7 +32,7 @@
                         </div>
                     -->
                         <div class="field button-field">
-                            <button>Login</button>
+                            <button id="login">Login</button>
                         </div>
                     </form>
 
@@ -63,13 +63,13 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Sign Up</header>
-                    <form action="#">
+                    <form id="sign-up-form" action="#">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" id="email-address">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password">
+                            <input type="password" placeholder="Create password" id="password">
                         </div>
 
                         <div class="field input-field">
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="field button-field">
-                            <button>Sign Up</button>
+                            <button id="sign-up">Sign Up</button>
                         </div>
                     </form>
 
@@ -104,7 +104,7 @@
             -->
             </div>
         </section>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- JavaScript -->
         <script src="js/loginsignup.js"></script>
     </body>
