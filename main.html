@@ -7,14 +7,10 @@
 </head>
 
 <header>
-	<nav>
-		<div class="xp-bar">
-			<div class="bar" id="xp"></div>
-		</div>
-		<ul class="navbar">
-			<li><a href="#">Shop</a></li>
-			<li><a href="#">Inventory</a></li>
-			<li><a href="#">Fight!</a></li>
+	<nav class="navbar">
+		<ul>
+			<li><a href="shop.html">Shop</a></li>
+			<li><a href="characters.html">Characters</a></li>
 		</ul>
 	</nav>
 </header>
@@ -25,61 +21,68 @@
 		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 		<lottie-player src="https://assets4.lottiefiles.com/datafiles/ApBHGLbGk8W9yS0/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 	</div>
-<div class="content">
-	<main class="app">
-		<section class="greeting">
-			<h2 class="title"></h2>
-		</section>
-		
-		<section class="create-todo">
-			<h3>CREATE A QUEST</h3>
-			<form id="new-todo-form">
-				<h4>Create a quest!</h4>
-				<input 
-					type="text" 
-					placeholder="e.g. Complete daily commissions"
-					name="content"
-					id="content" />
-				
-				<h4>Choose a region</h4>
-				<div class="options">
-					<label>
-						<input type="radio" name="category" id="category1" value="mondstadt" /> 
-						<span class="bubble mondstadt"></span>
-						<div>Mondstadt</div>
-					</label>
 
-					<label>
-						<input type="radio" name="category" id="category2" value="liyue" />
-						<span class="bubble liyue"></span>
-						<div>Liyue</div>
-					</label>
+	<div class="content">
+		<main class="app">
+			<section class="greeting">
+				<h2 class="title"></h2>
+			</section>
 
-					<label>
-						<input type="radio" name="category" id="category2" value="inazuma" />
-						<span class="bubble inazuma"></span>
-						<div>Inazuma</div>
-					</label>
+			<div class="stats">
+				<h3 class="level"></h3>
+				<h3 class="xp"></h3>
+				<h3 class="coins"></h3>
+			</div>
 
-					<label>
-						<input type="radio" name="category" id="category2" value="sumeru" />
-						<span class="bubble sumeru"></span>
-						<div>Sumeru</div>
-					</label>
+			<section class="create-todo">
+				<h3>CREATE A QUEST</h3>
+				<form id="new-todo-form">
+					<h4>Create a quest!</h4>
+					<input 
+						type="text" 
+						placeholder="e.g. Complete daily commissions"
+						name="content"
+						id="content" />
+					
+					<h4>Choose a region</h4>
+					<div class="options">
+						<label>
+							<input type="radio" name="category" id="category1" value="mondstadt" /> 
+							<span class="bubble mondstadt"></span>
+							<div>Mondstadt</div>
+						</label>
 
-				</div>
+						<label>
+							<input type="radio" name="category" id="category2" value="liyue" />
+							<span class="bubble liyue"></span>
+							<div>Liyue</div>
+						</label>
 
-				<input type="submit" value="Add quest" />
-			</form>
-		</section>
+						<label>
+							<input type="radio" name="category" id="category2" value="inazuma" />
+							<span class="bubble inazuma"></span>
+							<div>Inazuma</div>
+						</label>
 
-		<section class="todo-list">
-			<h3>Quest List</h3>
-			<div class="list" id="todo-list"></div>
-		</section>
+						<label>
+							<input type="radio" name="category" id="category2" value="sumeru" />
+							<span class="bubble sumeru"></span>
+							<div>Sumeru</div>
+						</label>
 
-	</main>
-</div>
+					</div>
+
+					<input type="submit" value="Add quest" />
+				</form>
+			</section>
+
+			<section class="todo-list">
+				<h3>Quest List</h3>
+				<div class="list" id="todo-list"></div>
+			</section>
+
+		</main>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
