@@ -1,5 +1,10 @@
+@font-face{
+    font-family: Futura;
+    src: url(fonts/futura\ medium\ bt.ttf)
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Futura';
     margin: 0;
     padding: 0;
 }
@@ -62,8 +67,10 @@ header nav ul li a {
 /* Variables */
 :root {
 	--primary: #EA40A4;
-	--business: #3a82ee;
-	--personal: var(--primary);
+	--mondstadt: #15e28d;
+	--liyue: #d49434;
+	--inazuma: #61178b;
+	--sumeru: #269b09;
 	--light: #EEE;
 	--grey: #888;
 	--dark: #313154;
@@ -71,17 +78,19 @@ header nav ul li a {
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--primary-glow: 0px 0px 4px rgba(247, 158, 247, 0.65);
+	--mondstadt-glow: 0px 0px 4px rgba(111, 226, 182, 0.75);
+	--liyue-glow: 0px 0px 4px rgba(235, 208, 91, 0.75);
+	--inazuma-glow: 0px 0px 4px rgba(189, 91, 228, 0.75);
+	--sumeru-glow: 0px 0px 4px rgba(121, 233, 98, 0.75);
 }
 /* End of Variables */
 
-/* Resets */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'montserrat', sans-serif;
+	font-family: 'Futura';
 }
 
 input:not([type="radio"]):not([type="checkbox"]), button {
@@ -179,13 +188,23 @@ input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	border-radius: 999px;
-	border: 2px solid var(--business);
-	box-shadow: var(--business-glow);
+	border: 2px solid var(--mondstadt);
+	box-shadow: var(--mondstadt-glow);
 }
 
-.bubble.personal {
-	border-color: var(--personal);
-	box-shadow: var(--personal-glow);
+.bubble.liyue {
+	border-color: var(--liyue);
+	box-shadow: var(--liyue-glow);
+}
+
+.bubble.inazuma {
+	border-color: var(--inazuma);
+	box-shadow: var(--inazuma-glow);
+}
+
+.bubble.sumeru {
+	border-color: var(--sumeru);
+	box-shadow: var(--sumeru-glow);
 }
 
 .bubble::after {
@@ -194,15 +213,25 @@ input[type="checkbox"] {
 	opacity: 0;
 	width: 0px;
 	height: 0px;
-	background-color: var(--business);
-	box-shadow: var(--business-glow);
+	background-color: var(--mondstadt);
+	box-shadow: var(--mondstadt-glow);
 	border-radius: 999px;
 	transition: 0.2s ease-in-out;
 }
 
-.bubble.personal::after {
-	background-color: var(--personal);
-	box-shadow: var(--personal-glow);
+.bubble.liyue::after {
+	background-color: var(--liyue);
+	box-shadow: var(--liyue-glow);
+}
+
+.bubble.inazuma::after {
+	background-color: var(--inazuma);
+	box-shadow: var(--inazuma-glow);
+}
+
+.bubble.sumeru::after {
+	background-color: var(--sumeru);
+	box-shadow: var(--sumeru-glow);
 }
 
 input:checked ~ .bubble::after {
@@ -226,7 +255,7 @@ input:checked ~ .bubble::after {
 	font-weight: 700;
 	text-transform: uppercase;
 	background-color: var(--primary);
-	box-shadow: var(--personal-glow);
+	box-shadow: var(--primary-glow);
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out;
