@@ -73,14 +73,13 @@ async function checkLogin(email, password) {
   } else {
   return false;
   }
-  }
+}
 
 function savePlayer(email, username, password) {
   var jsondata = {
     "email": email,
     "username": username,
     "password": password,
-    "xp": 0
   };
 
   var settings = {
@@ -96,11 +95,29 @@ function savePlayer(email, username, password) {
     "processData": false,
     "data": JSON.stringify(jsondata),
     "beforeSend": function(){
-      $("#sign-up").prop("disabled", true);
       $("#sign-up-form").trigger("reset");
     }
   };
-    
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
+  var jsondata2 = {"level": 1,"xpPoints": 0, "coins": 100, "username":username};
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://idasg2-7926.restdb.io/rest/stats",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": "63e28b26478852088da67e80",
+      "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(jsondata2)
+  }
+
   $.ajax(settings).done(function (response) {
     console.log(response);
   });

@@ -5,20 +5,26 @@
 	<title>Genshin Quest</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
-	<header>
-		<nav>
-			<div class="xp-bar">
-				<div class="bar" id="xp"></div>
-			</div>
-			<ul class="navbar">
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">Inventory</a></li>
-				<li><a href="#">Fight!</a></li>
-			</ul>
-		</nav>
-	</header>
 
+<header>
+	<nav>
+		<div class="xp-bar">
+			<div class="bar" id="xp"></div>
+		</div>
+		<ul class="navbar">
+			<li><a href="#">Shop</a></li>
+			<li><a href="#">Inventory</a></li>
+			<li><a href="#">Fight!</a></li>
+		</ul>
+	</nav>
+</header>
+
+<body>
+	<!--lottie animation when refreshed/loading-->
+	<div class="lottie-container">
+		<lottie-player src="https://assets4.lottiefiles.com/datafiles/Hc0DflKIkYg1j3u/data.json"  background="transparent"  speed="1.75"  style="width: 280px; height: 280px;"  loop  autoplay></lottie-player>
+	</div>
+<div class="content">
 	<main class="app">
 		<section class="greeting">
 			<h2 class="title"></h2>
@@ -72,6 +78,8 @@
 		</section>
 
 	</main>
+</div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

@@ -1,3 +1,8 @@
+setTimeout(function() {
+	document.querySelector('.lottie-container').style.display = 'none';
+	document.querySelector('.content').style.display = 'block';
+  }, 2650);
+
 const title = document.querySelector('.title');
 const username = JSON.parse(localStorage.getItem('username'));
 title.innerText = `Hi, ${username}!`;
