@@ -8,62 +8,122 @@ html{
     font-family: "Futura";
 }
 
-body{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header{
     position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+}
+
+.content{
+    max-width: 650px;
+    margin: 60px 100px;
 }
 
 .title{
-    position: absolute;
-    font-size: 70px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+    color: #226A80;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
 }
 
-.bgpic{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
+.para{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
 }
-
-.introduction{
-    position: relative;
-    font-size: medium;
-    color: white;
-    padding: 100px;
-
-}
-
-.section{
-    position: relative;
-    padding: 100px;
-    background: gainsboro;
-}
-
 
 .loginbutton{
-    background-color: rgb(141, 209, 249);
-    color: white;
-    border-radius: 8px;
-    height: 50px;
-    width: 200px;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    color: #fff;
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transition-property: background;
 }
 
 .loginbutton:hover{
-    background-color: rgb(102, 146, 212);
-    transform:translateY(-2px);
+    background: #0C4F60;
+}
+
+.bgpic{
+    position: absolute;
+    opacity: 80%;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 960px){
+    .title{
+        font-size: 45px;
+        font-weight: 50px;
+    }
+
+    .para{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px){
+    .title{
+        font-size: 35px;
+        font-weight: 40px;
+    }
+
+    .para{
+        font-size: 14px;
+    }
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: auto;
+}
+
+.media-icons a{
+    position: relative;
+    color: #111;
+    font-size: 25px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+
+.media-icons a:hover{
+    transform: scale(1.5);
 }
