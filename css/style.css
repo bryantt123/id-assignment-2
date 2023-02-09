@@ -8,15 +8,43 @@ html{
     font-family: "Futura";
 }
 
-/*.title{
-}*/
-
-.introduction{
-    font-size: medium;
-    color: white;
+body{
+    min-height: 100vh;
 }
 
-body{
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}
+
+.bgpic{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.introduction{
+    position: relative;
+    font-size: medium;
+    color: white;
+    padding: 100px;
+
+}
+
+.section{
     position: relative;
     padding: 100px;
     background: gainsboro;
@@ -24,16 +52,18 @@ body{
 
 
 .loginbutton{
-    background-color: rgb(47, 123, 167);
+    background-color: rgb(141, 209, 249);
     color: white;
     border-radius: 8px;
     height: 50px;
     width: 200px;
     font-size: 18px;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .loginbutton:hover{
-    background-color: rgb(29, 76, 146);
-    transform:translateY(-5px);
+    background-color: rgb(102, 146, 212);
+    transform:translateY(-2px);
 }
