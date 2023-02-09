@@ -18,48 +18,59 @@
 			</ul>
 		</nav>
 	</header>
+
 	<main class="app">
 		<section class="greeting">
-			<h2 class="title">
-				What's up, <input type="text" id="name" placeholder="Name here" />
-			</h2>
+			<h2 class="title"></h2>
 		</section>
 		
 		<section class="create-todo">
-			<h3>CREATE A TODO</h3>
+			<h3>CREATE A QUEST</h3>
 			<form id="new-todo-form">
-				<h4>What's on your todo?</h4>
+				<h4>Create a quest!</h4>
 				<input 
 					type="text" 
-					placeholder="e.g. Get some milk"
+					placeholder="e.g. Complete daily commissions"
 					name="content"
 					id="content" />
 				
-				<h4>Pick a category</h4>
+				<h4>Choose a region</h4>
 				<div class="options">
 					<label>
-						<input type="radio" name="category" id="category1" value="business" /> 
-						<span class="bubble business"></span>
-						<div>Business</div>
+						<input type="radio" name="category" id="category1" value="mondstadt" /> 
+						<span class="bubble mondstadt"></span>
+						<div>Mondstadt</div>
 					</label>
+
 					<label>
-						<input type="radio" name="category" id="category2" value="personal" />
-						<span class="bubble personal"></span>
-						<div>Personal</div>
+						<input type="radio" name="category" id="category2" value="liyue" />
+						<span class="bubble liyue"></span>
+						<div>Liyue</div>
 					</label>
+
+					<label>
+						<input type="radio" name="category" id="category2" value="inazuma" />
+						<span class="bubble inazuma"></span>
+						<div>Inazuma</div>
+					</label>
+
+					<label>
+						<input type="radio" name="category" id="category2" value="sumeru" />
+						<span class="bubble sumeru"></span>
+						<div>Sumeru</div>
+					</label>
+
 				</div>
 
-				<input type="submit" value="Add todo" />
+				<input type="submit" value="Add quest" />
 			</form>
 		</section>
-		<!-- End of New Todo -->
 
-		<!-- Todo List -->
 		<section class="todo-list">
-			<h3>TODO LIST</h3>
+			<h3>Quest List</h3>
 			<div class="list" id="todo-list"></div>
 		</section>
-		<!-- End of Todo List -->
+
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
