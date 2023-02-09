@@ -6,6 +6,38 @@ setTimeout(function() {
 const title = document.querySelector('.title');
 const username = JSON.parse(localStorage.getItem('username'));
 title.innerText = `Hi, ${username}!`;
+DisplayStats();
+
+function DisplayStats(){
+	$.ajax({
+		"async": true,
+		"crossDomain": true,
+		"url": "https://idasg2-c0ea.restdb.io/rest/stats",
+		"method": "GET",
+		"headers": {
+			"content-type": "application/json",
+			"x-apikey": "63e552fd478852088da67f84",
+			"cache-control": "no-cache"
+		},
+		"processData": false,
+	})
+	.done(function (response) {
+		const quests2 = response.filter(quest2 => quest2.username === username);
+		quests2.forEach(quest2 => {
+			const statsLevel = document.querySelector('.level');
+			const statsLevelValue = quest2.level;
+			statsLevel.innerText = `Current Level: ${quest2.level}`
+
+			const statsXp = document.querySelector('.xp');
+			const statsXpValue = JSON.parse(quest2.xpPoints);
+			statsXp.innerText = `Experience Points: ${statsXpValue}`;
+
+			const statsCoins = document.querySelector('.coins');
+			const statsCoinsValue = JSON.parse(quest2.coins);
+			statsCoins.innerText = `Coins: ${statsCoinsValue}`;
+		})
+	})
+}
 
 DisplayTodos();
 
@@ -174,6 +206,7 @@ function DisplayTodos() {
 				$.ajax(settings).done(function (response) {
 					console.log(response);
 					DisplayTodos();
+					DisplayStats();
 				});
 			})
 
