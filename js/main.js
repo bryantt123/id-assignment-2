@@ -1,7 +1,7 @@
 setTimeout(function() {
 	document.querySelector('.lottie-container').style.display = 'none';
 	document.querySelector('.content').style.display = 'block';
-  }, 2650);
+}, 2650);
 
 const title = document.querySelector('.title');
 const username = JSON.parse(localStorage.getItem('username'));
@@ -26,11 +26,11 @@ window.addEventListener('load', () => {
 		var settings = {
 			"async": true,
 			"crossDomain": true,
-			"url": "https://idasg2-7926.restdb.io/rest/quests",
+			"url": "https://idasg2-c0ea.restdb.io/rest/quests",
 			"method": "POST",
 			"headers": {
 				"content-type": "application/json",
-				"x-apikey": "63e28b26478852088da67e80",
+				"x-apikey": "63e552fd478852088da67f84",
 				"cache-control": "no-cache"
 			},
 			"processData": false,
@@ -56,11 +56,11 @@ function DisplayTodos() {
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://idasg2-7926.restdb.io/rest/quests",
+		"url": "https://idasg2-c0ea.restdb.io/rest/quests",
 		"method": "GET",
 		"headers": {
 			"content-type": "application/json",
-			"x-apikey": "63e28b26478852088da67e80",
+			"x-apikey": "63e552fd478852088da67f84",
 			"cache-control": "no-cache"
 		},
 		"processData": false,
@@ -116,22 +116,65 @@ function DisplayTodos() {
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"url": `https://idasg2-7926.restdb.io/rest/quests/`+quest._id,
+					"url": `https://idasg2-c0ea.restdb.io/rest/quests/`+quest._id,
 					"method": "DELETE",
 					"headers": {
 					  "content-type": "application/json",
-					  "x-apikey": "63e28b26478852088da67e80",
+					  "x-apikey": "63e552fd478852088da67f84",
 					  "cache-control": "no-cache"
 					}
+				}
+				
+				$.ajax({
+					"async": true,
+					"crossDomain": true,
+					"url": "https://idasg2-c0ea.restdb.io/rest/stats",
+					"method": "GET",
+					"headers": {
+						"content-type": "application/json",
+						"x-apikey": "63e552fd478852088da67f84",
+						"cache-control": "no-cache"
+					},
+					"processData": false,
+				})
+				.done(function (response) {
+					const quests2 = response.filter(quest2 => quest2.username === username);
+					quests2.forEach(quest2 => {
+						var level = quest2.level;
+						var xpPoints = quest2.xpPoints;
+						var coins = quest2.coins;
+						if (quest2.xpPoints >= 100){
+							level = quest2.level + 1;
+							xpPoints = quest2.xpPoints - 90;
+							coins = quest2.coins + 70;
+						} else{
+							xpPoints = quest2.xpPoints + 10;
+							coins = quest2.coins + 20
+						}
+						var jsondata = {"level": level,"xpPoints":xpPoints, "coins": coins, "username": username};
+						var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": `https://idasg2-c0ea.restdb.io/rest/stats/${quest2._id}`,
+						"method": "PUT",
+						"headers": {
+							"content-type": "application/json",
+							"x-apikey": "63e552fd478852088da67f84",
+							"cache-control": "no-cache"
+						},
+						"processData": false,
+						"data": JSON.stringify(jsondata)
+						}
 
-				  }
-				  
-
-				  $.ajax(settings).done(function (response) {
+						$.ajax(settings).done(function (response) {
+						console.log(response);
+						});
+					})
+				})
+				$.ajax(settings).done(function (response) {
 					console.log(response);
 					DisplayTodos();
-				  });
-			
+				});
 			})
 
 			edit.addEventListener('click', (e) => {
@@ -144,11 +187,11 @@ function DisplayTodos() {
 					var settings = {
 					"async": true,
 					"crossDomain": true,
-					"url": `https://idasg2-7926.restdb.io/rest/quests/${quest._id}`,
+					"url": `https://idasg2-c0ea.restdb.io/rest/quests/${quest._id}`,
 					"method": "PUT",
 					"headers": {
 						"content-type": "application/json",
-						"x-apikey": "63e28b26478852088da67e80",
+						"x-apikey": "63e552fd478852088da67f84",
 						"cache-control": "no-cache"
 					},
 					"processData": false,
@@ -163,25 +206,23 @@ function DisplayTodos() {
 			})
 
 			deleteButton.addEventListener('click', (e) => {
-
 				var settings = {
 				  "async": true,
 				  "crossDomain": true,
-				  "url": `https://idasg2-7926.restdb.io/rest/quests/${quest._id}`,
+				  "url": `https://idasg2-c0ea.restdb.io/rest/quests/${quest._id}`,
 				  "method": "DELETE",
 				  "headers": {
 					"content-type": "application/json",
-					"x-apikey": "63e28b26478852088da67e80",
+					"x-apikey": "63e552fd478852088da67f84",
 					"cache-control": "no-cache"
 				  }
 				}
 			  
 				$.ajax(settings).done(function (response) {
 				  console.log(response);
+				  DisplayTodos();
 				});
-				DisplayTodos();
-			  });
-
-	})
+			});
+		})
 	})
 }
