@@ -78,6 +78,11 @@ header nav ul li a {
 	padding: 0 10px;
 }
 
+header .navbar a:hover{
+    color:var(--primary);
+}
+
+
 /* Variables */
 :root {
 	--primary: #EA40A4;

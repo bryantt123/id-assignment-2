@@ -15,6 +15,35 @@ html{
     font-family: "Poppins", sans-serif;
 }
 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header.logo{
+    font-size: 1.7cm;
+    color: white;
+    text-decoration: none;
+}
+
+ .home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('pics/mountain.webp');
+ }
+
+
+
+
+/*  
 section{
     position: relative;
     width: 100%;
@@ -101,7 +130,7 @@ header{
     .para{
         font-size: 14px;
     }
-}
+} */
 
 /* SOCIAL MEDIA ICONS */
 
