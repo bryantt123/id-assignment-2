@@ -25,8 +25,7 @@ function DisplayStats(){
 		const quests2 = response.filter(quest2 => quest2.username === username);
 		quests2.forEach(quest2 => {
 			const statsLevel = document.querySelector('.level');
-			const statsLevelValue = quest2.level;
-			statsLevel.innerText = `Current Level: ${quest2.level}`
+			statsLevel.innerText = `Current Level: ${quest2.level}`;
 
 			const statsXp = document.querySelector('.xp');
 			const statsXpValue = JSON.parse(quest2.xpPoints);
@@ -36,14 +35,13 @@ function DisplayStats(){
 			const statsCoinsValue = JSON.parse(quest2.coins);
 			localStorage.setItem("coins", JSON.stringify(statsCoinsValue));
 			statsCoins.innerText = `Coins: ${statsCoinsValue}`;
-		})
-	})
+		});
+	});
 }
 
 DisplayTodos();
 
 window.addEventListener('load', () => {
-	todos = JSON.parse(localStorage.getItem('todos')) || [];
 	const newTodoForm = document.querySelector('#new-todo-form');
 
 	newTodoForm.addEventListener('submit', e => {
@@ -77,10 +75,8 @@ window.addEventListener('load', () => {
 
 		// Reset the form
 		e.target.reset();
-
-	})
-
-})
+	});
+});
 
 function DisplayTodos() {
 	const todoList = document.querySelector('#todo-list');
@@ -156,7 +152,7 @@ function DisplayTodos() {
 					  "x-apikey": "63e63782478852088da68022",
 					  "cache-control": "no-cache"
 					}
-				}
+				};
 				
 				$.ajax({
 					"async": true,
@@ -182,7 +178,7 @@ function DisplayTodos() {
 							coins = quest2.coins + 70;
 						} else{
 							xpPoints = quest2.xpPoints + 10;
-							coins = quest2.coins + 20
+							coins = quest2.coins + 20;
 						}
 						var jsondata = {"level": level,"xpPoints":xpPoints, "coins": coins, "username": username};
 						var settings = {
@@ -197,19 +193,19 @@ function DisplayTodos() {
 						},
 						"processData": false,
 						"data": JSON.stringify(jsondata)
-						}
+						};
 
 						$.ajax(settings).done(function (response) {
 						console.log(response);
 						});
-					})
-				})
+					});
+				});
 				$.ajax(settings).done(function (response) {
 					console.log(response);
 					DisplayTodos();
 					DisplayStats();
 				});
-			})
+			});
 
 			edit.addEventListener('click', (e) => {
 				const input = content.querySelector('input');
@@ -230,14 +226,14 @@ function DisplayTodos() {
 					},
 					"processData": false,
 					"data": JSON.stringify(jsondata)
-					}
+					};
 
 					$.ajax(settings).done(function (response) {
 					console.log(response);
-					DisplayTodos()
+					DisplayTodos();
 					});
-				})
-			})
+				});
+			});
 
 			deleteButton.addEventListener('click', (e) => {
 				var settings = {
@@ -250,24 +246,25 @@ function DisplayTodos() {
 					"x-apikey": "63e63782478852088da68022",
 					"cache-control": "no-cache"
 				  }
-				}
+				};
 			  
 				$.ajax(settings).done(function (response) {
 				  console.log(response);
 				  DisplayTodos();
 				});
 			});
-		})
-	})
+		});
+	});
 }
 
 
 /* NAVBAR */
-let navbar = document.querySelector('.navbar')
+/*
+let navbar = document.querySelector('.navbar');
 
 document.querySelector('#menu-bar').onclick = () =>{
     navbar.classList.toggle('active');
-}
+};
 
 document.querySelector('#close').onclick = () =>{
     navbar.classList.remove('active');
@@ -294,4 +291,4 @@ themeToggler.onclick = () =>{
     }else{
         document.querySelector('body').classList.remove('active');
     }
-}
+}*/

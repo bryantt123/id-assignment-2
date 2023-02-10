@@ -14,17 +14,19 @@ eyeIcon.addEventListener("click", () => {
       }
       password.type = "password";
       eyeIcon.classList.replace("bx-show", "bx-hide");
-  })
+  });
   
-})
-})      
+});
+});      
+
 
 links.forEach(link => {
-link.addEventListener("click", e => {
- e.preventDefault(); //preventing form submit
- forms.classList.toggle("show-signup");
+  link.addEventListener("click", e => {
+     e.preventDefault(); //preventing form submit
+     forms.classList.toggle("show-signup");
+  })
 })
-})
+
 
 // api-key for login information: 63e63782478852088da68022 
 
@@ -55,7 +57,7 @@ async function checkLogin(email, password) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": `https://idasg2-e717.restdb.io/rest/players?q={"email":"${email}"}`,
+  "url": "https://idasg2-e717.restdb.io/rest/players",    
   "method": "GET",
   "headers": {
   "content-type": "application/json",
@@ -69,7 +71,7 @@ async function checkLogin(email, password) {
   if (response.length === 0) {
   return false;
   } else if (response[0].password === password) {
-  const username = response[0].username;
+
   return { isValid: true, username: response[0].username, response };
   } else {
   return false;
@@ -105,7 +107,7 @@ function savePlayer(email, username, password) {
   });
 
   var jsondata2 = {"level": 1,"xpPoints": 0, "coins": 100, "username":username};
-  var settings = {
+  var settings2 = {
     "async": true,
     "crossDomain": true,
     "url": "https://idasg2-e717.restdb.io/rest/stats",
@@ -117,9 +119,9 @@ function savePlayer(email, username, password) {
     },
     "processData": false,
     "data": JSON.stringify(jsondata2)
-  }
+  };
 
-  $.ajax(settings).done(function (response) {
+  $.ajax(settings2).done(function (response) {
     console.log(response);
   });
 }

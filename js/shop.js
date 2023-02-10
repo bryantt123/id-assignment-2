@@ -113,7 +113,7 @@ boxes.forEach((box, index) => {
                 },
                 "processData": false,
                 "data": JSON.stringify(jsondata)
-                }
+                };
 
                 $.ajax(settings)
                 .done(function (response) {
@@ -154,14 +154,14 @@ boxes.forEach((box, index) => {
 						},
 						"processData": false,
 						"data": JSON.stringify(jsondata)
-						}
+						};
 
 						$.ajax(settings).done(function (response) {
 						console.log(response);
 						});
-                     })
-                })
-            })
-        })
-    })
-})
+                     });
+                });
+            });
+        });
+    });
+});

@@ -178,9 +178,9 @@ function getCharactersOwned() {
                         </div>`;
                     }
                 cardsContainer.innerHTML = cards;
-            })
-        })
-    })
+            });
+        });
+    });
 }
 
 getCharactersOwned();
