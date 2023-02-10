@@ -288,7 +288,10 @@ section{
 
 }
 
-/* lottie animation when refreshed/loading */ 
+.hidden{
+    display: none;
+}
+
 .lottie-container {
     position: fixed;
     top: 0;
@@ -298,8 +301,4 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-;
-  }
-  .content {
-    display: none;
   }
