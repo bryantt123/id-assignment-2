@@ -26,7 +26,7 @@ link.addEventListener("click", e => {
 })
 })
 
-// api-key for login information: 63e552fd478852088da67f84 
+// api-key for login information: 63e60003478852088da67ff3 
 
 document.getElementById("login-form").addEventListener("submit", async event => {
   event.preventDefault();
@@ -55,11 +55,11 @@ async function checkLogin(email, password) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": `https://idasg2-c0ea.restdb.io/rest/players?q={"email":"${email}"}`,
+  "url": `https://idasg2-fc8e.restdb.io/rest/players?q={"email":"${email}"}`,
   "method": "GET",
   "headers": {
   "content-type": "application/json",
-  "x-apikey": "63e552fd478852088da67f84",
+  "x-apikey": "63e60003478852088da67ff3",
   "cache-control": "no-cache"
   }
   };
@@ -86,11 +86,11 @@ function savePlayer(email, username, password) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://idasg2-c0ea.restdb.io/rest/players",
+    "url": "https://idasg2-fc8e.restdb.io/rest/players",
     "method": "POST",
     "headers": {
       "content-type": "application/json",
-      "x-apikey": "63e552fd478852088da67f84",
+      "x-apikey": "63e60003478852088da67ff3",
       "cache-control": "no-cache"
     },
     "processData": false,
@@ -108,11 +108,11 @@ function savePlayer(email, username, password) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://idasg2-c0ea.restdb.io/rest/stats",
+    "url": "https://idasg2-fc8e.restdb.io/rest/stats",
     "method": "POST",
     "headers": {
       "content-type": "application/json",
-      "x-apikey": "63e552fd478852088da67f84",
+      "x-apikey": "63e60003478852088da67ff3",
       "cache-control": "no-cache"
     },
     "processData": false,
