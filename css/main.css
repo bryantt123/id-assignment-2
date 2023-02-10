@@ -56,11 +56,12 @@ body {
 }
 
 html{
-    font-size: 100%;
+    font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
+
 section{
     padding:2rem 9%;
 }
@@ -104,8 +105,8 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    height: 50px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-	font-size: 62.5%;
 }
 
 header .navbar a{
@@ -437,4 +438,4 @@ input:checked ~ .bubble::after {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
