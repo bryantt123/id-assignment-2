@@ -55,7 +55,8 @@ boxes.forEach((box, index) => {
             console.log(response);
             const chars = response.filter(char => char.name === name && char.price <= localStorage.getItem('coins'));
             chars.forEach(char => {
-                var jsondata = {"character": name,"charImage": char.charImage, "username": localStorage.getItem('username')};
+                const username = JSON.parse(localStorage.getItem('username'));
+                var jsondata = {"character": name,"charImage": char.charImage, "username": username};
                 var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -77,7 +78,46 @@ boxes.forEach((box, index) => {
                 .fail(function (error) {
                     console.error(error);
                 });
+
+                $.ajax({
+					"async": true,
+					"crossDomain": true,
+					"url": "https://idasg2-c0ea.restdb.io/rest/stats",
+					"method": "GET",
+					"headers": {
+						"content-type": "application/json",
+						"x-apikey": "63e552fd478852088da67f84",
+						"cache-control": "no-cache"
+					},
+					"processData": false,
+				})
+				.done(function (response) {
+					const stats = response.filter(stat => stat.username === username);
+					stats.forEach(stat => {
+                        var level = stat.level;
+						var xpPoints = stat.xpPoints;
+						var coins = (stat.coins - char.price);
+                        var jsondata = {"level": level, "xpPoints": xpPoints, "coins": coins, "username": username};
+						var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": `https://idasg2-c0ea.restdb.io/rest/stats/${stat._id}`,
+						"method": "PUT",
+						"headers": {
+							"content-type": "application/json",
+							"x-apikey": "63e552fd478852088da67f84",
+							"cache-control": "no-cache"
+						},
+						"processData": false,
+						"data": JSON.stringify(jsondata)
+						}
+
+						$.ajax(settings).done(function (response) {
+						console.log(response);
+						});
+                     })
+                })
             })
-        });
+        })
     })
 })
