@@ -4,7 +4,7 @@ One or two paragraphs providing an overview of your project. Tell us about your 
 
 Essentially, this part is your sales pitch.
 
-Genshin Quest is made with the purpose of allowing users to keep track of their in-game quests and complete them in time, similar to how a checklist works. In addition to the checklist, users would be able to participate in a Player-vs-Enemy game where they can fight bosses using their strength, experience and weapons earned through completing their quests.
+Genshin Quest is made with the purpose of allowing users to keep track of their in-game quests and complete them in time, similar to how a checklist works. In addition to the checklist, users can earn experience points and coins through completing quests, and spend coins on buying new characters to customize how they want their own character to be.
  
 ## Design Process
 
@@ -14,7 +14,7 @@ This section is also where you would share links to any wireframes, mockups, dia
 These files should themselves either be included as a pdf file in the project itself (in an separate directory)
 Include the Adobe XD wireframe as a folder. You can include the XD share url. 
 
-This website is catered for the users of Genshin Impact - especially those who are busy with other commitments such as school or work. By using this website, these users will be motivated to complete all their quests in time and also be able to keep track of all their ongoing quests.
+This website is catered for the users of Genshin Impact - especially those who are busy with other commitments such as school or work. By using this website, these users will be motivated to complete all their quests in time and also be able to keep track of all their ongoing quests. In addition, users can play around with extra features on the website to make the website more interesting. This includes a character select page where users can select a character that they own and a shop page where users can buy new characters.
 
 ### User Stories
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
@@ -22,34 +22,35 @@ In particular, as part of this section we recommend that you provide a list of U
 
 - As a low commitment Genshin Impact player, I would want some sort of motivation to complete my quests in addition to the rewards in earn in-game, so that I can feel a bigger sense of accomplishment.
 - As a Genshin Impact player who has not logged onto the game in a long time, I would want a way to keep track of all my quests, so that I know which quest I should complete first before proceeding onto the next one.
-- As a regular user on Genshin Quest, I want something that makes Genshin Quest different from other checklists, so that I would stick with Genshin Quest instead of using a regular checklist like Microsoft To-do or such.
+- As a regular user on Genshin Quest, I want something that makes Genshin Quest different from other checklists, so that I would stick with Genshin Quest instead of using a regular checklist like Microsoft To-do.
 
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...z
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Introduction/Landing Page: Brief explanation of what Genshin Quest has to offer to users.
+- Sign-up: Users can sign up using their email and desired password as well as input their own username in order to save their quests later on
+- Log-in: Users can login and continue from where they left off on their previous session in Genshin Quest
+- Quest List: Users can create a quest that they want to complete, and it can be put into categories marked by the different regions in Genshin Impact.
+    - Mark as completed: Users will gain experience points and coins for completing their quests. This will save into RESTdb so that player stats can be tracked.
+    - Edit quest: Quests can be edited in case users have a change of mind. This will change the current quest that is stored in RESTdb.
+    - Delete quest: Quests can be deleted in case users want to delete them. This will delete the current quest stored in RESTdb.
+- Shop: Users can spend their coins earned through completing quests on new characters. These characters are from Genshin Impact.
 
 ### Features Left to Implement
-- Login/Signup - Users will be able to keep their progress and ongoing quests by saving them inside of an account that they have to create.
-- Checklist - Users can input new quests into their checklist and mark them as completed, edit them or delete them.
-- User inventory - Users can see the items they have acquired so far through opening chests in this page.
-- Equip item - Users can equip new items to replace their old items and upgrade their stats.
-- Stat upgrade - Users can spend their upgrades earned from leveling up and upgrade their strength or health points.
-- Shop system - Users can buy chests through the shop using coins that they have earned from completing quests or killing bosses. These chests will have weapons that they can equip.
-- Boss fight - Users can select a boss to fight. Fight will have 2 choices, attack or run. Attack will show simple moves that they can use to attack the boss. Run will run away from the boss and stop the fight.
-- Post boss fight - Users will earn experience and/or a chest if they defeat the boss.
+- Character select page
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
+- HTML5
+- CSS
+- JavaScript
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
+- RESTdb Collections
+- Lottie Animations
+- 
 
 
 ## Testing
