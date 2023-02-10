@@ -48,6 +48,7 @@ document.getElementById('sign-up-form').addEventListener('submit', event => {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password1').value;
   savePlayer(email, username, password);
+  alert("Successfully signed up!");
 });
 
 async function checkLogin(email, password) {
