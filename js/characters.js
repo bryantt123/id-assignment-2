@@ -52,7 +52,7 @@ function getCharactersOwned() {
                         cards += `
                         <div class="card">
                             <div class="card-image">
-                                <img src="pics/kaeya.png" alt="Character">
+                                <img src="pics/kaeya.webp" alt="Character">
                             </div>
 
                             <div class="card-body">
@@ -84,7 +84,7 @@ function getCharactersOwned() {
                         cards += `
                         <div class="card">
                             <div class="card-image">
-                                <img src="pics/bennet.png" alt="Character">
+                                <img src="pics/bennet.webp" alt="Character">
                             </div>
 
                             <div class="card-body">
@@ -132,7 +132,7 @@ function getCharactersOwned() {
                         cards += `
                         <div class="card">
                             <div class="card-image">
-                                <img src="pics/xiao.png" alt="Character">
+                                <img src="pics/xiao.webp" alt="Character">
                             </div>
 
                             <div class="card-body">
@@ -164,7 +164,7 @@ function getCharactersOwned() {
                         cards += `
                         <div class="card">
                             <div class="card-image">
-                                <img src="pics/wanderer.png" alt="Character">
+                                <img src="pics/wanderer.webp" alt="Character">
                             </div>
 
                             <div class="card-body">

@@ -5,6 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
 body {
     font-size: 14px;
     min-height: 100vh;
@@ -14,6 +15,15 @@ body {
     align-items: center;
     padding: 20px;
 }
+
+.bgimg{
+    position: absolute;
+    opacity: 80%;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+ }
 
 .container {
     position: relative;
@@ -26,14 +36,14 @@ body {
 .card {
     position: relative;
     width: 270px;
+    height: 500px;
     margin: 2em;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 180px 1fr auto;
 }
 
-.card-body,
-.card-footer {
+.card-body{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,34 +98,6 @@ body {
     font-size: 1.1em;
     line-height: 20px;
     text-align: center;
-}
-
-.card-footer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-}
-
-.card-footer .info {
-    font-size: 0.9em;
-    padding: 10px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.card-footer .info:last-child {
-    border: none;
-}
-
-.card-footer .info .type {
-    text-transform: uppercase;
-    margin-top: 2px;
-    font-size: 0.8em;
 }
 
 .selector {
