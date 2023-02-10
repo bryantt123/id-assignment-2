@@ -23,7 +23,9 @@ html{
     background-position: center;
     display: flex;
     align-items: center;
+    justify-content: center;
  }
+
 
  .bgimg{
     position: absolute;
@@ -51,7 +53,7 @@ html{
 .content{
     text-align: center;
     align-items: center;
-    padding-left: 30px;
+    justify-content: center;
 }
 
 
@@ -63,6 +65,7 @@ html{
     align-items: center;
     justify-content: center;
     column-gap: 30px;
+    background-color: rgb(156,124,124);
 }
 
 .form{
@@ -73,6 +76,7 @@ html{
     border-radius: 6px;
     background: transparent;
     backdrop-filter: blur(5px);
+    margin-top: 30px;
 }
 .form.signup{
     opacity: 0;
@@ -86,15 +90,7 @@ html{
     opacity: 0;
     pointer-events: none;
 }
-header{
-    font-size: 28px;
-    font-weight: 600;
-    color: #232836;
-    text-align: center;
-}
-form{
-    margin-top: 30px;
-}
+
 .form .field{
     position: relative;
     height: 50px;
@@ -220,9 +216,6 @@ a.google span{
     
 }
 
-
-/* SOCIAL MEDIA ICONS */
-
 /* SOCIAL MEDIA ICONS */
 .fa {
     padding: 15px;
@@ -254,6 +247,18 @@ a.google span{
 .fa-instagram {
   background: #125688;
   color: white;
+}
+
+/* ----  Responsiveness   ----  */
+@media (max-width: 780px) {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 /* SOCIAL MEDIA ICONS 

@@ -31,6 +31,15 @@ themeToggler.onclick = () =>{
     }
 }*/
 
+/* LOTTIE animation */
+setTimeout(function() {
+    document.querySelector('.lottie-container').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+  }, 2650);
+
+
+
+/* buying function */
 const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box, index) => {
