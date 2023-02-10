@@ -184,7 +184,7 @@ section{
     bottom:0;
 }
 
-.products .box-container .box .image .icons a{
+.products .box-container .box .image .icons button{
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
@@ -199,7 +199,7 @@ section{
     width:100%;
 }
 
-.products .box-container .box .image .icons a:hover{
+.products .box-container .box .image .icons button:hover{
     background:#333;
 }
 
