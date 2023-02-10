@@ -1,5 +1,6 @@
-let navbar = document.querySelector('.navbar')
 /*
+let navbar = document.querySelector('.navbar')
+
 document.querySelector('#menu-bar').onclick = () =>{
     navbar.classList.toggle('active');
 }
@@ -30,12 +31,6 @@ themeToggler.onclick = () =>{
         document.querySelector('body').classList.remove('active');
     }
 }*/
-
-/* LOTTIE animation */
-setTimeout(function() {
-    document.querySelector('.lottie-container').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-  }, 2650);
 
 /* buying function */
 const boxes = document.querySelectorAll(".box");
