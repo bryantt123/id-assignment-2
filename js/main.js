@@ -34,6 +34,7 @@ function DisplayStats(){
 
 			const statsCoins = document.querySelector('.coins');
 			const statsCoinsValue = JSON.parse(quest2.coins);
+			localStorage.setItem("coins", JSON.stringify(statsCoinsValue));
 			statsCoins.innerText = `Coins: ${statsCoinsValue}`;
 		})
 	})
