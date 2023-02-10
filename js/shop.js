@@ -1,6 +1,6 @@
 let navbar = document.querySelector('.navbar')
 
-/*document.querySelector('#menu-bar').onclick = () =>{
+document.querySelector('#menu-bar').onclick = () =>{
     navbar.classList.toggle('active');
 }
 
@@ -29,7 +29,7 @@ themeToggler.onclick = () =>{
     }else{
         document.querySelector('body').classList.remove('active');
     }
-}*/
+}
 
 /* LOTTIE animation */
 setTimeout(function() {
