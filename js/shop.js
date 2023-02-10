@@ -1,5 +1,5 @@
 let navbar = document.querySelector('.navbar')
-
+/*
 document.querySelector('#menu-bar').onclick = () =>{
     navbar.classList.toggle('active');
 }
@@ -29,7 +29,7 @@ themeToggler.onclick = () =>{
     }else{
         document.querySelector('body').classList.remove('active');
     }
-}
+}*/
 
 /* LOTTIE animation */
 setTimeout(function() {
@@ -54,6 +54,38 @@ boxes.forEach((box, index) => {
 
         event.preventDefault();
         const name = box.querySelector("h3").innerText;
+
+        if (name === "Yelan"){
+            document.getElementById("yelanButton").disabled = true;
+            document.getElementById("yelanButton").innerText = "Owned";
+        } else if (name === "Yoimiya"){
+            document.getElementById("yoimiyaButton").disabled = true;
+            document.getElementById("yoimiyaButton").innerText = "Owned";
+        } else if (name === "Kaeya"){
+            document.getElementById("kaeyaButton").disabled = true;
+            document.getElementById("kaeyaButton").innerText = "Owned";
+        } else if (name === "Kazuha"){
+            document.getElementById("kazuhaButton").disabled = true;
+            document.getElementById("kazuhaButton").innerText = "Owned";
+        } else if (name === "Bennett"){
+            document.getElementById("bennettButton").disabled = true;
+            document.getElementById("bennettButton").innerText = "Owned";
+        } else if (name === "Rosaria"){
+            document.getElementById("rosariaButton").disabled = true;
+            document.getElementById("rosariaButton").innerText = "Owned";
+        } else if (name === "Qiqi"){
+            document.getElementById("qiqiButton").disabled = true;
+            document.getElementById("qiqiButton").innerText = "Owned";
+        } else if (name === "Xiao"){
+            document.getElementById("xiaoButton").disabled = true;
+            document.getElementById("xiaoButton").innerText = "Owned";
+        } else if (name === "Mona"){
+            document.getElementById("monaButton").disabled = true;
+            document.getElementById("monaButton").innerText = "Owned";
+        } else if (name === "Wanderer"){
+            document.getElementById("wandererButton").disabled = true;
+            document.getElementById("wandererButton").innerText = "Owned";
+        }
         // make a post request to the RESTdb collection with the name and price
         $.ajax({
             "async": true,
@@ -71,6 +103,7 @@ boxes.forEach((box, index) => {
             console.log(response);
             const chars = response.filter(char => char.name === name && char.price <= localStorage.getItem('coins'));
             chars.forEach(char => {
+
                 const username = JSON.parse(localStorage.getItem('username'));
                 var jsondata = {"character": name, "charDesc": char.charDesc, "charImage": char.charImage, "username": username};
                 var settings = {
