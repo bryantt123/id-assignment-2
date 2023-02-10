@@ -85,11 +85,11 @@ boxes.forEach((box, index) => {
         $.ajax({
             "async": true,
             "crossDomain": true,
-            "url": "https://idasg2-fc8e.restdb.io/rest/characters",
+            "url": "https://idasg2-e717.restdb.io/rest/characters",
             "method": "GET",
             "headers": {
                 "content-type": "application/json",
-                "x-apikey": "63e60003478852088da67ff3",
+                "x-apikey": "63e63782478852088da68022",
                 "cache-control": "no-cache"
             },
             "processData": false,
@@ -104,11 +104,11 @@ boxes.forEach((box, index) => {
                 var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://idasg2-fc8e.restdb.io/rest/characters-owned",
+                "url": "https://idasg2-e717.restdb.io/rest/characters-owned",
                 "method": "POST",
                 "headers": {
                     "content-type": "application/json",
-                    "x-apikey": "63e60003478852088da67ff3",
+                    "x-apikey": "63e63782478852088da68022",
                     "cache-control": "no-cache"
                 },
                 "processData": false,
@@ -126,11 +126,11 @@ boxes.forEach((box, index) => {
                 $.ajax({
 					"async": true,
 					"crossDomain": true,
-					"url": "https://idasg2-fc8e.restdb.io/rest/stats",
+					"url": "https://idasg2-e717.restdb.io/rest/stats",
 					"method": "GET",
 					"headers": {
 						"content-type": "application/json",
-						"x-apikey": "63e60003478852088da67ff3",
+						"x-apikey": "63e63782478852088da68022",
 						"cache-control": "no-cache"
 					},
 					"processData": false,
@@ -145,11 +145,11 @@ boxes.forEach((box, index) => {
 						var settings = {
 						"async": true,
 						"crossDomain": true,
-						"url": `https://idasg2-fc8e.restdb.io/rest/stats/${stat._id}`,
+						"url": `https://idasg2-e717.restdb.io/rest/stats/${stat._id}`,
 						"method": "PUT",
 						"headers": {
 							"content-type": "application/json",
-							"x-apikey": "63e60003478852088da67ff3",
+							"x-apikey": "63e63782478852088da68022",
 							"cache-control": "no-cache"
 						},
 						"processData": false,

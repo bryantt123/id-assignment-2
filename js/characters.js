@@ -2,11 +2,11 @@ function getCharactersOwned() {
     $.ajax({
         "async": true,
         "crossDomain": true,
-        "url": "https://idasg2-fc8e.restdb.io/rest/characters-owned",
+        "url": "https://idasg2-e717.restdb.io/rest/characters-owned",
         "method": "GET",
         "headers": {
           "content-type": "application/json",
-          "x-apikey": "63e60003478852088da67ff3",
+          "x-apikey": "63e63782478852088da68022",
           "cache-control": "no-cache"
         }
       })
@@ -29,14 +29,14 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Yoimiya"){
                         cards += `
                         <div class="card">
                             <div class="card-image">
-                                <img src="pics/yoimiya.png" alt="Character">
+                                <img src="pics/yoimiya.webp" alt="Character">
                             </div>
 
                             <div class="card-body">
@@ -45,7 +45,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Kaeya"){
@@ -61,7 +61,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Kazuha"){
@@ -77,7 +77,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Bennett"){
@@ -93,7 +93,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Rosaria"){
@@ -109,7 +109,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Qiqi"){
@@ -125,7 +125,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Xiao"){
@@ -141,7 +141,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Mona"){
@@ -157,7 +157,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     } else if (item.character === "Wanderer"){
@@ -173,7 +173,7 @@ function getCharactersOwned() {
                             </div>
 
                             <div class="selector">
-                                <button>go with this!</button>
+                                <button>CHOOSE</button>
                             </div>
                         </div>`;
                     }
