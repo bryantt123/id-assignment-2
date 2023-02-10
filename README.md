@@ -79,7 +79,8 @@ Lottie Animations - https://lottiefiles.com/, used to make the webite more aesth
 - If users do not fill up the create a quest input box but select a region and tries to add quest, request will be ignored and quest will not be added to quest list.
 - If users fill up the create a quest input box but does not select a region and tries to add quest, Mondstat will become the default region.
 - Quests can be edited by clicking the edit button and the quest will be replaced by the edited one on the RESTdb database and also show up on the quest list.
-- When users press delete the button from a quest, 20 coins and 10xp will be earned. Information will be reflected on user's game status.
+- When users press delete the button from a quest, quest will be deleted.
+- When users click on the radio check button to signify that they completed a quest, 20 coins and 10xp will be earned. Information will be reflected on user's game status.
 - After users gain 100xp, they will level up and gain an extra 50 coins. Information will be reflected on user's game status.
 - Tested the responiveness of this section on different browers and screen sizes and features are all able to go side by side or adjust to fit a whole row size.
 - Lottie animation added when website is loading.
@@ -92,7 +93,6 @@ Lottie Animations - https://lottiefiles.com/, used to make the webite more aesth
 - If user had already bought a character, that character's "Buy" button will be disabled and will instead display "Owned" to signify that users already have that character.
 - Tested the responiveness of this section on different browers and screen sizes and character cards are all able to go side by side or adjust to fit a whole row size.
 - Notes: Character ownership is not tracked, therefore page will still allow users to buy the same character if they refresh the page or come back to the page another time. However, in a single session it will still prevent users from buying the same character more than once by disabling the "Buy" button.
-- Notes: background picture does not adjust to fit diffrent screen sizes.
 
 7. Character page:
 - Users will only be shown characters that they own. This is found from the RESTdb database where characters owned are stored in a collection that can be retrieved.
