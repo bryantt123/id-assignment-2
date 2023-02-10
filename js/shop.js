@@ -32,10 +32,19 @@ themeToggler.onclick = () =>{
 }*/
 
 const boxes = document.querySelectorAll(".box");
+const animation = document.querySelector("lottie-player");
+const content = document.querySelector(".products");
 
 boxes.forEach((box, index) => {
     const btn = box.querySelector(".cart-btn");
     btn.addEventListener("click", (event) => {
+        animation.classList.remove("hidden");
+        content.classList.add("hidden");
+        setTimeout(() => {
+            animation.classList.add("hidden");
+            content.classList.remove("hidden");
+        }, 3000);
+
         event.preventDefault();
         const name = box.querySelector("h3").innerText;
         // make a post request to the RESTdb collection with the name and price
