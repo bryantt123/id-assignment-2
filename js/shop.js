@@ -37,8 +37,6 @@ setTimeout(function() {
     document.querySelector('.content').style.display = 'block';
   }, 2650);
 
-
-
 /* buying function */
 const boxes = document.querySelectorAll(".box");
 const animation = document.querySelector("lottie-player");
