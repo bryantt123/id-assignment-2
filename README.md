@@ -1,10 +1,12 @@
 # Genshin Quest
+https://bryantt123.github.io/id-assignment-2/
 
 Similar to how a checklist works, Genshin Quest is made with the purpose of allowing users to keep track of their in-game quests and be motivated to complete them in times. In addition to the checklist, users can earn experience points and coins through completing quests, and spend coins on buying new characters to customize how they want their own character to be.
  
 ## Design Process
 
 [Wireframe](/id-assignment-2/wireframe/assg%202%20laptop%20view%20(2).xd)
+https://github.com/bryantt123/id-assignment-2
 
 This website is catered for the users of Genshin Impact - especially those who are busy with other commitments such as school or work. By using this website, these users will be motivated to complete all their quests in time and also be able to keep track of all their ongoing quests. In addition, users can play around with extra features on the website to make the user experience more interesting. This includes a character select page where users can select a character that they own and a shop page where users can buy new characters.
 
