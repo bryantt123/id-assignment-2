@@ -72,7 +72,7 @@ boxes.forEach((box, index) => {
             const chars = response.filter(char => char.name === name && char.price <= localStorage.getItem('coins'));
             chars.forEach(char => {
                 const username = JSON.parse(localStorage.getItem('username'));
-                var jsondata = {"character": name,"charImage": char.charImage, "username": username};
+                var jsondata = {"character": name, "charDesc": char.charDesc, "charImage": char.charImage, "username": username};
                 var settings = {
                 "async": true,
                 "crossDomain": true,
