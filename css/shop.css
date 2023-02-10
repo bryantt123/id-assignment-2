@@ -101,7 +101,7 @@ section{
 
 
 header{
-    position: fixed;
+    position: sticky;
     top:0; left:0; right:0;
     background:#fff;
     padding:2rem 9%;
@@ -109,6 +109,7 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    height: 50px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
